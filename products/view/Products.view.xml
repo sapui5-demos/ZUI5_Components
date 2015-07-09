@@ -1,0 +1,29 @@
+<core:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="sap.training.products.view.Products" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+ <Table items="{/Products}">
+		<columns>
+			<Column>
+				<Text text="{i18n>columnId}"/>
+			</Column>
+			<Column>
+				<Text text="{i18n>columnName}"/>
+			</Column>
+			<Column>
+				<Text text="{i18n>columnDescription}"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{ID}"/>
+					<Text text="{Name}"/>
+					<Text text="{Description}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+
+</core:View>

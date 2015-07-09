@@ -1,0 +1,62 @@
+{
+	"_version": "1.1.0",
+
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "sap.training.products",
+		"type": "component",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{compTitle}}",
+		"description": "{{compDescription}}",
+		"applicationVersion": {
+			"version": "0.1.0"
+		},
+		"dataSources": {
+			"DemoService": {
+				"uri": "/destinations/ODATA_ORG/V2/OData/OData.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
+	},
+
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "SAPUI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": "sap.training.products.view.Products",
+
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {
+					"minVersion": "1.30"
+				}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.training.products.i18n.i18n"
+				}
+			},
+			"": {
+				"dataSource": "DemoService",
+				"settings": {}
+			}
+		}
+	}
+}
