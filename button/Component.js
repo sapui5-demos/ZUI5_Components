@@ -1,6 +1,7 @@
 sap.ui.define([
-   "sap/ui/core/UIComponent",
-   "sap/m/Button"],
+		"sap/ui/core/UIComponent",
+		"sap/m/Button"
+	],
 	function(UIComponent, Button) {
 		"use strict";
 		return UIComponent.extend("sap.training.button.Component", {
@@ -14,10 +15,10 @@ sap.ui.define([
 				}
 			},
 
-			init: function() {
-				// call the init function of the parent
-				UIComponent.prototype.init.apply(this, arguments);
-			},
+			// init: function() {
+			// 	// call the init function of the parent
+			// 	UIComponent.prototype.init.apply(this, arguments);
+			// },
 
 			createContent: function() {
 				this.oButton = new Button(this.createId("btn"));
