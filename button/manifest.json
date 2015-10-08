@@ -33,6 +33,10 @@
 					"minVersion": "1.30"
 				}
 			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
 		}
 	}
 }
